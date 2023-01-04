@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <div class="container-fluid">
+      <div class="row py-5">
+        <div class="col-md-4 mx-auto bg-white mt-5">
+            <h3 class="text-center mt-5">Temperature Converter</h3>
+          <!-- inputs -->
+          <form id="form" class="pt-5 px-2 ">
+            <!-- select  -->
+            <div class="row">
+              <div class="col-6">
+                <label for="input" class="text-danger">FROM</label>
+                <select id="from" name="select" class="p-1">
+                  <option value="celsius">Celsius</option>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </div>
+
+              <!-- col 2 -->
+              <div class="col-6">
+                <label for="output" class="text-danger">TO</label>
+                <select id="to" name="select" class="p-1">
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="celsius">Celsius</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group my-3">
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="temperature"
+                  placeholder="Enter Temperature"
+                />
+              </div>
+            </div>
+
+            <div class="form-group my-3">
+              <input
+                type="submit"
+                class="form-control btn btn-dark"
+                id="submit"
+                value="Convert"
+              />
+            </div>
+          </form>
+          <!-- results -->
+          <div id="resultDiv">
+            <div class="form-group my-3">
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control bg-muted"
+                  id="result"
+                  placeholder="Result"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
