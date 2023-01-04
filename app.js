@@ -23,7 +23,7 @@ function calculateResult(e) {
 
   //  from celsius to fahrenheit and viceVersa
   if (inputValue === "celsius" && outputValue === "fahrenheit") {
-    result.value = (inputTemp * 9) / 5 + 32;
+    result.value = ((inputTemp * 9) / 5 + 32);
   } else if (inputValue === "fahrenheit" && outputValue === "celsius") {
     result.value = ((5 / 9) * (inputTemp - 32)).toFixed(2);
   }
