@@ -33,7 +33,7 @@ function calculateResult(e) {
   function calculate(){
     //  from celsius to fahrenheit and viceVersa
   if (inputValue === "celsius" && outputValue === "fahrenheit") {
-    result.value = inputTemp * (9 / 5) + 32;
+    result.value = (inputTemp * (9 / 5) + 32).toFixed(2);
     
   } else if (inputValue === "fahrenheit" && outputValue === "celsius") {
     result.value = ((5 / 9) * (inputTemp - 32)).toFixed(2);
@@ -41,18 +41,18 @@ function calculateResult(e) {
   }
   // from kelvin to celsius and viceVersa
   else if (inputValue === "kelvin" && outputValue === "celsius") {
-    result.value = inputTemp - 273.15;
+    result.value = (inputTemp - 273.15).toFixed(2);
   
   } else if (inputValue === "celsius" && outputValue === "kelvin") {
-    result.value = +inputTemp + 273.15;
+    result.value = (+inputTemp + 273.15).toFixed(2);
     
   }
   // from fahrenheit to kelvin and viceVersa
   else if (inputValue === "fahrenheit" && outputValue === "kelvin") {
-    result.value = (inputTemp - 32) * (5 / 9) + 273.15;
+    result.value = ((inputTemp - 32) * (5 / 9) + 273.15).toFixed(2);
     
   } else if (inputValue === "kelvin" && outputValue === "fahrenheit") {
-    result.value = (inputTemp - 273.15) * (9 / 5) + 32;
+    result.value = ((inputTemp - 273.15) * (9 / 5) + 32).toFixed(2) ;
     
   }
   // if input and output are same //
